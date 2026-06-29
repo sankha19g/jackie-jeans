@@ -102,6 +102,7 @@ const Aiquiz = () => {
                 window.speechSynthesis.cancel();
             }
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [step]);
 
     function listen() {
@@ -242,12 +243,12 @@ const Aiquiz = () => {
                             )}
                             {!isListening && value && (
                                 <p className="text-lg font-semibold text-amber-700 bg-amber-700/10 py-2.5 px-5 rounded-lg">
-                                    Heard: "{value}"
+                                    Heard: &quot;{value}&quot;
                                 </p>
                             )}
                             {!isListening && !value && (
                                 <p className="text-gray-400 dark:text-zinc-500 italic">
-                                    Click "Voice Answer" to reply using speech
+                                    Click &quot;Voice Answer&quot; to reply using speech
                                 </p>
                             )}
                         </div>
